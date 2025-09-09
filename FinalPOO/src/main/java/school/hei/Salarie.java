@@ -12,4 +12,9 @@ public class Salarie extends Travailleur {
         this.mensualSalary = mensualSalary;
         this.promotions = promotions;
     }
+
+
+    public double calculSalary() {
+        return mensualSalary;
+    }
 }

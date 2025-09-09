@@ -1,6 +1,7 @@
 package school.hei;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.List;
 
 public class Prestataire extends Travailleur {
@@ -11,5 +12,10 @@ public class Prestataire extends Travailleur {
         super(id, firstName, lastName, email, phoneNumber, pointages);
         this.TJM = TJM;
         this.promotions = promotions;
+    }
+
+    public double salarySum(LocalDate debut, LocalDate fin) {
+        long jours = Period.between(debut, fin);
+        return jours * TJM;
     }
 }
